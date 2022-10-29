@@ -46,3 +46,13 @@ for df_ in [X_train_normed, X_test_normed]:
     # Drop the original column
     df_.drop(columns=col_to_normalize, inplace=True)
 ```
+
+* Improve auc score based on new logistic regression
+```
+# Train the model
+logreg.fit(X_train_normed, y_train)
+
+logreg_auc_score = roc_auc_score(y_test, logreg.predict_proba(X_test_normed)[:, 1])
+print(f'\nAUC score: {logreg_auc_score:.4f}')
+```
+
