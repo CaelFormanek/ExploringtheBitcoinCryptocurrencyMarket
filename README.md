@@ -32,9 +32,6 @@ tpot = TPOTClassifier(
 
 * Correct for high variance using log normalization
 ```
-# Import numpy
-import numpy as np
-
 # Copy X_train and X_test into X_train_normed and X_test_normed
 X_train_normed, X_test_normed = X_train.copy(), X_test.copy()
 
